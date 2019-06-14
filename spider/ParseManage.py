@@ -34,9 +34,10 @@ class ParseManage:
 		return self
 
 	def __exit__(self,exc_type,exc_value,traceback):
-		print('PARSE')
-		print(f'type:{exc_type}')
-		print(f'type:{exc_value}')
-		print(f'traceback:{traceback}')
+		if exc_type is not None:
+			print('PARSE')
+			print(f'type:{exc_type}')
+			print(f'type:{exc_value}')
+			print(f'traceback:{traceback}')
 		return True
 

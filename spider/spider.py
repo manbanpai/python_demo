@@ -35,14 +35,15 @@ class Spider:
 		return self
 
 	def __exit__(self,exc_type,exc_value,traceback):
-		print('SPIDER')
-		print(f'type:{exc_type}')
-		print(f'type:{exc_value}')
-		print(f'traceback:{traceback}')
+		if exc_type is not None:
+			print('SPIDER')
+			print(f'type:{exc_type}')
+			print(f'type:{exc_value}')
+			print(f'traceback:{traceback}')
 		return True
 
 
 if __name__ == '__main__':
-	url = "";
+	url = "http://www.jlun.net";
 	with Spider(url) as spider:
 		spider.work(1)
