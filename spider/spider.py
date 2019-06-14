@@ -44,6 +44,6 @@ class Spider:
 
 
 if __name__ == '__main__':
-	url = "http://www.jlun.net";
+	url = "";
 	with Spider(url) as spider:
 		spider.work(1)
